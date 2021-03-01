@@ -17,6 +17,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         nameText.becomeFirstResponder()
         nameText.delegate = self
+        
     }
     
     //start button pressed

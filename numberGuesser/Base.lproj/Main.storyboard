@@ -107,13 +107,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your guess is too" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IvX-Em-qgb">
+                                <rect key="frame" x="74" y="568" width="268" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YmT-Ej-qQD">
+                                <rect key="frame" x="81" y="652" width="252" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Please reset the game to start again!"/>
+                                <connections>
+                                    <action selector="guessButton:" destination="Jfs-Gf-sS4" eventType="touchUpInside" id="Kwi-9A-LlE"/>
+                                    <action selector="resetButton:" destination="Jfs-Gf-sS4" eventType="touchUpInside" id="Vhl-2n-Bd0"/>
+                                    <action selector="startGameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QOy-HT-eBD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0Cx-Mh-aKd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="guessFeedback" destination="IvX-Em-qgb" id="FBD-9K-mk5"/>
                         <outlet property="guessTextField" destination="mrV-5N-t8I" id="1Gy-O6-1G0"/>
                         <outlet property="nameLabel" destination="57t-KB-ipP" id="6ge-9d-oar"/>
+                        <outlet property="resetButton" destination="YmT-Ej-qQD" id="seo-oe-sUS"/>
                         <outlet property="userLivesLabel" destination="hsa-wq-30e" id="XK4-HA-lid"/>
                     </connections>
                 </viewController>
@@ -125,6 +144,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
