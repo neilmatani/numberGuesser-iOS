@@ -98,6 +98,24 @@ class GuesserViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
+    }
+    
+    override open var shouldAutorotate: Bool{
+        return false
+    }
+    
+    override open var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+        return .portrait
+    }
+    
+    override open var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+        return .portrait
+    }
     /*
     // MARK: - Navigation
 

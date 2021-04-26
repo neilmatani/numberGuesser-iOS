@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -16,36 +16,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please Enter your Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHm-ix-tFO">
-                                <rect key="frame" x="99" y="384" width="187" height="21"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcg-hg-jED">
-                                <rect key="frame" x="128" y="518" width="158" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start Number Guesser!"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dcg-hg-jED">
+                                <rect key="frame" x="128" y="518" width="158" height="48"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment>
+                                            <string key="content">Start
+Number Guesser!</string>
+                                            <attributes>
+                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
                                 <connections>
                                     <action selector="startGameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Toc-yL-BA2"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xFh-ML-hQU">
-                                <rect key="frame" x="76" y="413" width="263" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tjl-NH-08N">
+                                <rect key="frame" x="75.666666666666686" y="431" width="263" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tjl-NH-08N">
-                                <rect key="frame" x="76" y="413" width="263" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Enter your Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHm-ix-tFO">
+                                <rect key="frame" x="113.66666666666669" y="381" width="187" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MHm-ix-tFO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6DM-ZK-jAh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dcg-hg-jED" secondAttribute="trailing" constant="128" id="7YB-T2-Vrg"/>
+                            <constraint firstItem="tjl-NH-08N" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FgC-RP-tbB"/>
+                            <constraint firstItem="tjl-NH-08N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SCM-45-C3B"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tjl-NH-08N" secondAttribute="trailing" constant="75.5" id="VLe-QT-rur"/>
+                            <constraint firstItem="tjl-NH-08N" firstAttribute="top" secondItem="MHm-ix-tFO" secondAttribute="bottom" constant="29" id="Y93-5r-HLl"/>
+                            <constraint firstItem="dcg-hg-jED" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="128" id="fTO-WR-n4h"/>
+                            <constraint firstItem="dcg-hg-jED" firstAttribute="top" secondItem="tjl-NH-08N" secondAttribute="bottom" constant="53" id="pIq-CP-TnA"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="nameText" destination="tjl-NH-08N" id="DfS-IN-cxG"/>
@@ -59,64 +71,60 @@
         <!--Guesser View Controller-->
         <scene sceneID="oMn-U1-Kzp">
             <objects>
-                <viewController id="Jfs-Gf-sS4" customClass="GuesserViewController" customModule="numberGuesser" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" interfaceStyle="light" id="Jfs-Gf-sS4" customClass="GuesserViewController" customModule="numberGuesser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TjS-eP-xbZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hi Player!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57t-KB-ipP">
-                                <rect key="frame" x="171" y="260" width="72" height="21"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Lives Left:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buB-j6-NwC">
+                                <rect key="frame" x="148.66666666666666" y="299" width="116.99999999999997" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Lives Left:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buB-j6-NwC">
-                                <rect key="frame" x="149" y="301" width="117" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your guess is too" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IvX-Em-qgb">
+                                <rect key="frame" x="129.33333333333331" y="595" width="155.33333333333331" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsa-wq-30e">
-                                <rect key="frame" x="195" y="330" width="25" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsa-wq-30e">
+                                <rect key="frame" x="194.66666666666666" y="341" width="25" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="mrV-5N-t8I">
-                                <rect key="frame" x="154" y="450" width="107" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="mrV-5N-t8I">
+                                <rect key="frame" x="141" y="431" width="132" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="132" id="E4z-bN-Edf"/>
+                                    <constraint firstAttribute="height" constant="34" id="Szg-9c-ddB"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83z-ib-ETP">
-                                <rect key="frame" x="190" y="492" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your guess here:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIh-D8-m1o">
+                                <rect key="frame" x="121.66666666666669" y="402" width="171" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83z-ib-ETP">
+                                <rect key="frame" x="183" y="506" width="48" height="30"/>
                                 <state key="normal" title="Guess!"/>
                                 <connections>
                                     <action selector="guessButton:" destination="Jfs-Gf-sS4" eventType="touchUpInside" id="USO-nX-2p9"/>
                                     <action selector="startGameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yzR-Yz-NQs"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter your guess here:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIh-D8-m1o">
-                                <rect key="frame" x="122" y="421" width="171" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi Player!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57t-KB-ipP">
+                                <rect key="frame" x="171" y="242" width="72" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your guess is too" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IvX-Em-qgb">
-                                <rect key="frame" x="74" y="568" width="268" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <color key="textColor" systemColor="systemRedColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YmT-Ej-qQD">
-                                <rect key="frame" x="81" y="652" width="252" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YmT-Ej-qQD">
+                                <rect key="frame" x="81" y="661" width="252" height="30"/>
                                 <state key="normal" title="Please reset the game to start again!"/>
                                 <connections>
                                     <action selector="guessButton:" destination="Jfs-Gf-sS4" eventType="touchUpInside" id="Kwi-9A-LlE"/>
@@ -127,7 +135,26 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0Cx-Mh-aKd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mrV-5N-t8I" firstAttribute="centerX" secondItem="TjS-eP-xbZ" secondAttribute="centerX" id="1s4-UA-roI"/>
+                            <constraint firstItem="YmT-Ej-qQD" firstAttribute="top" secondItem="IvX-Em-qgb" secondAttribute="bottom" constant="40" id="3Kg-HF-xSf"/>
+                            <constraint firstItem="IvX-Em-qgb" firstAttribute="centerX" secondItem="TjS-eP-xbZ" secondAttribute="centerX" id="96f-gK-7jn"/>
+                            <constraint firstItem="mrV-5N-t8I" firstAttribute="top" secondItem="kIh-D8-m1o" secondAttribute="bottom" constant="8" symbolic="YES" id="J28-lb-3qI"/>
+                            <constraint firstItem="buB-j6-NwC" firstAttribute="top" secondItem="57t-KB-ipP" secondAttribute="bottom" constant="36" id="N6z-tI-fHH"/>
+                            <constraint firstItem="kIh-D8-m1o" firstAttribute="top" secondItem="hsa-wq-30e" secondAttribute="bottom" constant="13" id="O5Y-65-UWD"/>
+                            <constraint firstItem="buB-j6-NwC" firstAttribute="centerX" secondItem="TjS-eP-xbZ" secondAttribute="centerX" id="T25-Mf-clU"/>
+                            <constraint firstItem="IvX-Em-qgb" firstAttribute="top" secondItem="83z-ib-ETP" secondAttribute="bottom" constant="59" id="UTJ-Zc-PbW"/>
+                            <constraint firstItem="83z-ib-ETP" firstAttribute="top" secondItem="mrV-5N-t8I" secondAttribute="bottom" constant="41" id="Wxn-BV-674"/>
+                            <constraint firstItem="YmT-Ej-qQD" firstAttribute="centerX" secondItem="TjS-eP-xbZ" secondAttribute="centerX" id="auA-Mi-bjP"/>
+                            <constraint firstItem="57t-KB-ipP" firstAttribute="centerX" secondItem="TjS-eP-xbZ" secondAttribute="centerX" id="c3k-Mp-0dr"/>
+                            <constraint firstItem="mrV-5N-t8I" firstAttribute="centerY" secondItem="TjS-eP-xbZ" secondAttribute="centerY" id="ijS-t2-aiL"/>
+                            <constraint firstItem="hsa-wq-30e" firstAttribute="top" secondItem="buB-j6-NwC" secondAttribute="bottom" constant="21" id="lJd-8h-YT4"/>
+                            <constraint firstItem="83z-ib-ETP" firstAttribute="centerX" secondItem="TjS-eP-xbZ" secondAttribute="centerX" id="qRq-x8-4Bl"/>
+                            <constraint firstItem="kIh-D8-m1o" firstAttribute="centerX" secondItem="TjS-eP-xbZ" secondAttribute="centerX" id="qha-gL-E5A"/>
+                            <constraint firstItem="hsa-wq-30e" firstAttribute="centerX" secondItem="TjS-eP-xbZ" secondAttribute="centerX" id="rNW-Rn-r4n"/>
+                        </constraints>
                     </view>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="guessFeedback" destination="IvX-Em-qgb" id="FBD-9K-mk5"/>
                         <outlet property="guessTextField" destination="mrV-5N-t8I" id="1Gy-O6-1G0"/>
@@ -138,7 +165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kSZ-SU-7Oo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="869.56521739130437" y="87.723214285714278"/>
+            <point key="canvasLocation" x="869.15887850467288" y="87.473002159827217"/>
         </scene>
     </scenes>
     <resources>
