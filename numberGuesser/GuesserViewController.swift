@@ -16,7 +16,7 @@ class GuesserViewController: UIViewController {
     @IBOutlet weak var resetButton: UIButton!
     
     var name = ""
-    var user = userSession()
+    var user = userSession() //initialise user
     
     
     override func viewDidLoad() {
@@ -39,6 +39,7 @@ class GuesserViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    //display popup if input is invalid
     func invalidInput(){
         let alert = UIAlertController(title:"Invalid Input!", message:"Please enter a number between 0 and 100!", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default)
@@ -46,6 +47,7 @@ class GuesserViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    //check if inputted string is a number
     func isStringAnInt(stringNumber: String) -> Bool {
         if let _ = Int(stringNumber) {
             return true
@@ -56,7 +58,7 @@ class GuesserViewController: UIViewController {
     @IBAction func guessButton(_ sender: Any) {
         let userGuess = guessTextField.text!
         
-        guessTextField.resignFirstResponder()
+        guessTextField.resignFirstResponder() //dismiss keyboard
         
         if isStringAnInt(stringNumber: userGuess){
             let guessInt: Int = Int(userGuess)!
@@ -99,14 +101,14 @@ class GuesserViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
-    }
+    } //dismiss keyboard when user touches away
     
+    //dismiss current view when reset button tapped
     @IBAction func resetButton(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    
-    
+    //make sure view stays portrait regardless of physical screen orientation
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
