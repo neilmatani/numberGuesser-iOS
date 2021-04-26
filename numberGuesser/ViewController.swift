@@ -17,6 +17,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         nameText.becomeFirstResponder()
         nameText.delegate = self
+        nameText.autocapitalizationType = .sentences
+        overrideUserInterfaceStyle = .light
         
     }
     
@@ -29,6 +31,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         nameText.resignFirstResponder()
         return false
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
     
     

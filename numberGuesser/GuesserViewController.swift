@@ -26,6 +26,7 @@ class GuesserViewController: UIViewController {
         nameLabel.text = "Hi \(user.userName!)! "
         userLivesLabel.text = "\(user.lives)"
         NSLog("User target is: %d", user.targetNumber)
+        overrideUserInterfaceStyle = .light
         
     }
     
@@ -54,6 +55,8 @@ class GuesserViewController: UIViewController {
     
     @IBAction func guessButton(_ sender: Any) {
         let userGuess = guessTextField.text!
+        
+        guessTextField.resignFirstResponder()
         
         if isStringAnInt(stringNumber: userGuess){
             let guessInt: Int = Int(userGuess)!
@@ -92,6 +95,10 @@ class GuesserViewController: UIViewController {
             }
         }else {invalidInput()}
             
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
     
     @IBAction func resetButton(_ sender: UIButton) {
